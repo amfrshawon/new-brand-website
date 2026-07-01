@@ -141,3 +141,24 @@
 .review-card .stars { color: #f5b400; margin-bottom: 8px; }
 .review-card p { color: var(--text-gray); margin-bottom: 10px; }
 .review-card .reviewer { font-weight: 700; font-size: 14px; }
+
+/* --- Blog post list (Blog index page) --- */
+.blog-list {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.blog-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.2s;
+}
+.blog-card:hover { border-color: var(--neon-lime); transform: translateY(-3px); }
+.blog-card .blog-date { font-size: 13px; color: var(--text-gray); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.blog-card h3 { font-family: var(--font-head) !important; font-size: 22px; margin: 8px 0 10px; color: var(--text-white); }
+.blog-card p { color: var(--text-gray); font-size: 15px; margin: 0; }

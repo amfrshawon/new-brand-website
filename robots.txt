@@ -1,0 +1,9 @@
+# CashMyCarTX — robots.txt
+# Everything is public; nothing here requires blocking crawlers, including
+# AI/LLM crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, etc.)
+# — no explicit rules for them means they're covered by the wildcard allow below.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://amfrshawon.github.io/new-brand-website/sitemap.xml
