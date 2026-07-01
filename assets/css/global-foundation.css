@@ -1,0 +1,159 @@
+/* ==========================================================================
+   GLOBAL FOUNDATION
+   Loaded on every page. Variables + reset + shared button/section styles
+   that header.css, home.css, and every other page's CSS build on top of.
+   ========================================================================== */
+
+/* --- 1. FONTS ---
+   Self-hosted files can go in assets/fonts/ later; using Google Fonts CDN
+   for now to keep the scaffold simple. */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* --- 2. VARIABLES --- */
+:root {
+    --bg-dark: #FFFFFF;
+    --bg-card: #F9FAFB;
+    --neon-lime: #00A94F;
+    --neon-lime-hover: #008f43;
+    --blurple: #5D5FEF;
+    --text-white: #111827;   /* near-black body text, not literal white */
+    --text-gray: #4B5563;
+    --glass-border: rgba(0, 0, 0, 0.1);
+
+    --font-head: 'Outfit', sans-serif;
+    --font-body: 'Hind', sans-serif;
+}
+
+/* --- 3. RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    width: 100%;
+    line-height: 1.6;
+}
+
+body.no-scroll, html.no-scroll {
+    overflow: hidden;
+}
+
+html { overflow-x: hidden; width: 100%; }
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+h3 { font-weight: bold; }
+img { max-width: 100%; display: block; }
+
+/* --- 4. LAYOUT UTILITY --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 5. SHARED BUTTON STYLES ---
+   Used across hero, header nav-cta, footer, and mobile menu. */
+.btn-primary {
+    background-color: var(--neon-lime);
+    color: white;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 50px;
+    display: inline-block;
+    font-family: var(--font-head) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background-color: var(--neon-lime-hover);
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid rgba(0,0,0,0.1);
+    color: var(--text-white);
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-family: var(--font-head) !important;
+    cursor: pointer;
+}
+.btn-outline:hover { border-color: var(--neon-lime); color: var(--neon-lime); }
+
+.btn-cta {
+    width: 100%;
+    background: var(--neon-lime);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 16px;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-family: var(--font-head) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 169, 79, 0.4);
+    background: var(--neon-lime-hover);
+}
+.btn-cta svg { transition: transform 0.3s ease; }
+.btn-cta:hover svg { transform: translateX(4px); }
+.btn-cta svg path { stroke: white !important; stroke-width: 2; fill: none; }
+
+.btn-black {
+    background: black;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-family: var(--font-head) !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-black:hover { background: #333; }
+
+/* --- 6. TEXT GRADIENT (hero headline accent) --- */
+.text-gradient {
+    background: linear-gradient(90deg, var(--neon-lime), var(--blurple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- 7. SECTION SPACING (shared by How-It-Works, Bento, FAQ, etc.) --- */
+.section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+@media(max-width: 768px) {
+    .section-padding { padding-top: 40px; padding-bottom: 40px; }
+}
+
+.section-header { margin-bottom: 40px; }
+.section-header h2 { font-family: var(--font-head) !important; font-size: 48px; font-weight: 700; margin-bottom: 10px; }
+.section-header p { color: var(--text-gray); }
+
+@media(max-width: 768px) {
+    .section-header h2 { font-size: 34px; }
+}
