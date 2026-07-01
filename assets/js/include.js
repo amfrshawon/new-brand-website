@@ -32,6 +32,24 @@
       const value = getByPath(cfg, el.getAttribute("data-bind-src"));
       if (value != null) el.setAttribute("src", value);
     });
+
+    // <title> can't contain child elements, so the page-title suffix lives
+    // on <body data-page-title="..."> instead and gets combined with the
+    // brand name here.
+    const pageTitle = document.body.dataset.pageTitle;
+    if (pageTitle && cfg.brandName) {
+      document.title = `${pageTitle} — ${cfg.brandName}`;
+    }
+
+    // Google Maps embed: only render the iframe once a real embed URL is
+    // configured, so an unset gbp.mapEmbedUrl shows a clean placeholder
+    // instead of an iframe pointed at a broken URL.
+    root.querySelectorAll("[data-map-embed]").forEach((el) => {
+      const url = cfg.gbp && cfg.gbp.mapEmbedUrl;
+      if (url) {
+        el.innerHTML = `<iframe src="${url}" loading="lazy" title="Map"></iframe>`;
+      }
+    });
   }
 
   async function loadIncludes() {

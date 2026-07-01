@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — [BRAND NAME]</title>
+  <meta name="description" content="Get in touch with our team." />
+  <link rel="stylesheet" href="assets/css/global-foundation.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/page.css" />
+</head>
+<body data-page-title="Contact Us">
+  <div data-include="partials/header.html"></div>
+
+  <main class="content-area">
+    <section class="page-hero">
+      <h1>Contact Us</h1>
+      <p>Questions about an offer, a pickup, or anything else? We're here to help.</p>
+    </section>
+
+    <section class="section-padding container">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="icon">📞</div>
+          <h3>Phone</h3>
+          <p><a data-bind-href="phoneHref" data-bind="phone" href="tel:1-888-000-0000">1-888-000-0000</a></p>
+        </div>
+        <div class="info-card">
+          <div class="icon">✉️</div>
+          <h3>Email</h3>
+          <p><a data-bind-href="emailHref" data-bind="email" href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+        <div class="info-card">
+          <div class="icon">📍</div>
+          <h3>Address</h3>
+          <p data-bind="address.street">[STREET ADDRESS]</p>
+          <p><span data-bind="address.city">[CITY]</span>, <span data-bind="address.state">[ST]</span> <span data-bind="address.zip">[ZIP]</span></p>
+        </div>
+      </div>
+
+      <!-- Static markup only — no backend wired up yet. Needs a form handler
+           (e.g. Formspree, Netlify Forms, or your own endpoint) before this can submit. -->
+      <form class="contact-form" onsubmit="return false;">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button class="btn-primary" type="submit">Send Message</button>
+        <p style="font-size:13px; color:var(--text-gray);">TODO: wire this form up to a real submission handler.</p>
+      </form>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>

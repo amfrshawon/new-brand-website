@@ -19,6 +19,23 @@ window.SITE_CONFIG = {
     state: "[ST]",
     zip: "[ZIP]",
   },
+  // Google Business Profile (GBP) — the listing that backs local-SEO/map results.
+  // If the business operates multiple GBP listings (one per city/location),
+  // turn this into an array of { name, address, phone, mapsUrl, placeId, hours }
+  // objects instead and update the pages that read gbp.* accordingly.
+  gbp: {
+    mapsUrl: "[GOOGLE MAPS / GBP LISTING URL]",
+    placeId: "[GOOGLE PLACE ID]",
+    // Leave as null until you have a real embed URL (Google Maps > Share >
+    // Embed a map > copy the src="..." value) — the locations page shows a
+    // clean placeholder instead of a broken iframe while this is null.
+    mapEmbedUrl: null,
+    hours: {
+      mondayFriday: "8:00 AM – 8:00 PM",
+      saturday: "9:00 AM – 6:00 PM",
+      sunday: "Closed",
+    },
+  },
   logo: {
     // Point this at an SVG/PNG in assets/images/ once you have a real file.
     // Until then, header.js renders styled text using brandName instead.
