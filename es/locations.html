@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ubicaciones — [BRAND NAME]</title>
+  <meta name="description" content="Encuentra dónde compramos autos cerca de ti — más de 200 ubicaciones a nivel nacional." />
+  <link rel="stylesheet" href="../assets/css/global-foundation.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/page.css" />
+</head>
+<body data-page-title="Ubicaciones" data-lang="es" data-page-id="locations">
+  <div data-include="../partials/header-es.html"></div>
+
+  <main class="content-area">
+    <section class="page-hero">
+      <h1>Ubicaciones</h1>
+      <p>Probablemente estemos a la vuelta de la esquina — remolque gratis donde sea que esté tu auto.</p>
+    </section>
+
+    <section class="section-padding container">
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="icon">📍</div>
+          <h3>Dirección Principal</h3>
+          <p data-bind="address.street">[DIRECCIÓN]</p>
+          <p><span data-bind="address.city">[CIUDAD]</span>, <span data-bind="address.state">[EST]</span> <span data-bind="address.zip">[CP]</span></p>
+        </div>
+        <div class="info-card">
+          <div class="icon">📞</div>
+          <h3>Llámanos</h3>
+          <p><a data-bind-href="phoneHref" data-bind="phone" href="tel:1-888-000-0000">1-888-000-0000</a></p>
+        </div>
+        <div class="info-card">
+          <div class="icon">🕒</div>
+          <h3>Horario</h3>
+          <p><span data-bind="gbp.hours.mondayFriday">Lun–Vie: 8am–8pm</span></p>
+          <p><span data-bind="gbp.hours.saturday">Sáb: 9am–6pm</span></p>
+        </div>
+      </div>
+
+      <div class="map-embed" data-map-embed>
+        <p style="padding:60px 20px; text-align:center; color:var(--text-gray);">El mapa aparecerá aquí una vez que se agregue una URL de Google Maps en <code>gbp.mapEmbedUrl</code> en site-config.js.</p>
+      </div>
+    </section>
+
+    <section class="section-padding container">
+      <div class="section-header" style="text-align:center;">
+        <h2>Principales Ciudades Donde Compramos Autos</h2>
+        <p>¿No ves tu ciudad? Igual compramos ahí — llámanos u obtén una oferta instantánea en línea.</p>
+      </div>
+      <div class="link-grid">
+        <a href="#">Chicago, IL</a>
+        <a href="#">Filadelfia, PA</a>
+        <a href="#">Houston, TX</a>
+        <a href="#">Miami, FL</a>
+        <a href="#">Los Ángeles, CA</a>
+        <a href="#">Dallas, TX</a>
+        <a href="#">Sacramento, CA</a>
+        <a href="#">Atlanta, GA</a>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="../partials/footer-es.html"></div>
+
+  <script src="../assets/js/site-config.js"></script>
+  <script src="../assets/js/include.js"></script>
+  <script src="../assets/js/nav.js"></script>
+</body>
+</html>

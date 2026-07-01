@@ -50,6 +50,30 @@
         el.innerHTML = `<iframe src="${url}" loading="lazy" title="Map"></iframe>`;
       }
     });
+
+    setupLanguageLinks(root);
+  }
+
+  // Every page carries <body data-lang="en|es" data-page-id="about-us">.
+  // Spanish pages live one directory down at es/<page-id>.html (or
+  // es/index.html), sharing the same flat filenames as their English
+  // counterparts, so the switch is a pure string computation — no lookup
+  // table to keep in sync.
+  function setupLanguageLinks(root) {
+    const lang = document.body.dataset.lang || "en";
+    const pageId = document.body.dataset.pageId || "index";
+    const file = pageId === "index" ? "index.html" : `${pageId}.html`;
+    const enHref = lang === "es" ? `../${file}` : file;
+    const esHref = lang === "es" ? file : `es/${file}`;
+
+    root.querySelectorAll('[data-lang-link="en"]').forEach((a) => {
+      a.setAttribute("href", enHref);
+      a.classList.toggle("active", lang === "en");
+    });
+    root.querySelectorAll('[data-lang-link="es"]').forEach((a) => {
+      a.setAttribute("href", esHref);
+      a.classList.toggle("active", lang === "es");
+    });
   }
 
   async function loadIncludes() {
