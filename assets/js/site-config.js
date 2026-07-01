@@ -7,7 +7,7 @@
  * Nothing else needs to change when you do — every page updates automatically.
  */
 window.SITE_CONFIG = {
-  brandName: "[BRAND NAME]",
+  brandName: "CashMyCarTX",
   tagline: "Sell Your Car In Seconds",
   phone: "1-888-000-0000",
   phoneHref: "tel:1-888-000-0000",
@@ -40,7 +40,7 @@ window.SITE_CONFIG = {
     // Point this at an SVG/PNG in assets/images/ once you have a real file.
     // Until then, header.js renders styled text using brandName instead.
     src: null,
-    alt: "[BRAND NAME] logo",
+    alt: "CashMyCarTX logo",
   },
   social: {
     facebook: "#",
