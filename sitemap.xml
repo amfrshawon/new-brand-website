@@ -271,4 +271,22 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://amfrshawon.github.io/new-brand-website/es/houston.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://amfrshawon.github.io/new-brand-website/houston.html" />
   </url>
+  <url>
+    <loc>https://amfrshawon.github.io/new-brand-website/honda-accord.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amfrshawon.github.io/new-brand-website/honda-accord.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://amfrshawon.github.io/new-brand-website/es/honda-accord.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amfrshawon.github.io/new-brand-website/honda-accord.html" />
+  </url>
+  <url>
+    <loc>https://amfrshawon.github.io/new-brand-website/es/honda-accord.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://amfrshawon.github.io/new-brand-website/honda-accord.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://amfrshawon.github.io/new-brand-website/es/honda-accord.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://amfrshawon.github.io/new-brand-website/honda-accord.html" />
+  </url>
 </urlset>
