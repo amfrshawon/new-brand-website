@@ -81,3 +81,17 @@ To add a new page in both languages:
    paths prefixed with `../` (e.g. `../assets/css/global-foundation.css`).
 3. Add the new page to both `partials/header.html`/`header-es.html` (nav) and
    `partials/footer.html`/`footer-es.html` (footer links) if it should appear there.
+
+## Cache-busting after CSS/JS/partial changes
+
+Every `<link>`/`<script>`/`data-include` reference to a file under `assets/`
+or `partials/` carries a `?v=2` query string. **Bump this number sitewide any
+time you change a CSS/JS file or a partial** — otherwise returning visitors'
+browsers (mobile Safari is especially aggressive about this) can keep serving
+the *old* cached copy of that file indefinitely, even after a hard refresh of
+the page itself, since the sub-resource has its own independent cache
+lifetime. This bit us once already (a footer CSS fix looked "not fixed" on a
+real phone purely from stale cache) — bumping the version string forces every
+browser to fetch fresh, with no exceptions to remember or explain.
+
+To bump: find-and-replace `?v=2` → `?v=3` (etc.) across every `.html` file.
