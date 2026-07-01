@@ -5,14 +5,16 @@
  * no data is fetched from any third party.
  */
 (function () {
+  // Texas cities only — this business serves Texas exclusively, keep these
+  // consistent with the city lists on locations.html / the footer.
   const SAMPLE_SALES = [
-    { title: "2016 Honda Accord", city: "Chicago, IL" },
+    { title: "2016 Honda Accord", city: "Houston, TX" },
     { title: "2014 Toyota Camry", city: "Austin, TX" },
-    { title: "2018 Ford F-150", city: "Phoenix, AZ" },
-    { title: "2012 Nissan Altima", city: "Tampa, FL" },
-    { title: "2019 Chevrolet Malibu", city: "Columbus, OH" },
-    { title: "2015 Jeep Grand Cherokee", city: "Denver, CO" },
-    { title: "2017 Hyundai Elantra", city: "Charlotte, NC" },
+    { title: "2018 Ford F-150", city: "Dallas, TX" },
+    { title: "2012 Nissan Altima", city: "San Antonio, TX" },
+    { title: "2019 Chevrolet Malibu", city: "Fort Worth, TX" },
+    { title: "2015 Jeep Grand Cherokee", city: "El Paso, TX" },
+    { title: "2017 Hyundai Elantra", city: "Corpus Christi, TX" },
   ];
 
   const CAR_ICON =
