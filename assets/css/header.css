@@ -38,7 +38,7 @@
 
 .logo {
     z-index: 1002;
-    height: 68px;
+    height: 92px;
     display: flex;
     align-items: center;
     font-family: var(--font-head) !important;
@@ -49,7 +49,7 @@
 .logo img { height: 100%; width: auto; }
 
 @media(max-width: 768px) {
-    .logo { height: 52px; }
+    .logo { height: 66px; }
 }
 
 .nav-links {
@@ -224,6 +224,11 @@
     width: 25px;
     height: 20px;
     position: relative;
+    /* Must beat .nav-links' z-index:1001 (the full-screen mobile menu overlay)
+       — as siblings inside .nav-pill, an explicit z-index always wins over
+       z-index:auto regardless of the parent's own z-index, so without this
+       the hamburger (morphed into the close X) vanishes under the open menu. */
+    z-index: 1003;
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     cursor: pointer;
@@ -413,12 +418,12 @@ body.hide-nav-offer .mobile-action-bar .offer {
     .dropdown:hover .dropdown-menu { transform: translateY(0); }
     .lang-popup { right: 0; left: auto; }
 
-    .content-area { margin-top: 126px; }
+    .content-area { margin-top: 150px; }
 }
 
 /* Slightly tighter nav on small-tablet range */
 @media (min-width: 769px) and (max-width: 992px) {
-    .content-area { margin-top: 116px; }
+    .content-area { margin-top: 145px; }
     .nav-links a, .dropdown-trigger { font-size: 12px; }
     .nav-links > a, .nav-links > .dropdown > .dropdown-trigger { padding: 10px 12px; }
 }
@@ -519,5 +524,5 @@ body.hide-nav-offer .mobile-action-bar .offer {
 
     /* height left as auto (base rule) instead of a hardcoded value — a fixed
        height here silently breaks any time the logo/content changes size */
-    .content-area { margin-top: 138px; }
+    .content-area { margin-top: 154px; }
 }
