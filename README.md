@@ -4,7 +4,7 @@ Plain HTML/CSS/JS, no build step. Cloned/adapted from a competitor's design syst
 (cashforcars.com) with placeholder branding — see `assets/js/site-config.js` to
 swap in the real brand name, phone, address, and logo everywhere at once.
 
-Live: https://amfrshawon.github.io/new-brand-website/
+Live: https://cashmycartx.com/
 
 ## Structure
 

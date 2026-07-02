@@ -8,12 +8,12 @@ Service area: Texas only (not a nationwide service).
 
 ## Key pages
 
-- [Homepage](https://amfrshawon.github.io/new-brand-website/): overview, instant offer entry point
-- [How It Works](https://amfrshawon.github.io/new-brand-website/how-it-works.html): the 3-step process (offer, pickup, payment) and what a seller needs (title, ID, keys)
-- [Locations](https://amfrshawon.github.io/new-brand-website/locations.html): Texas cities served, hours, contact
-- [FAQ](https://amfrshawon.github.io/new-brand-website/faq.html): direct answers to common seller questions (pickup speed, title requirements, payment timing, vehicle condition, fees, service area)
-- [About Us](https://amfrshawon.github.io/new-brand-website/about-us.html): company mission
-- [Contact](https://amfrshawon.github.io/new-brand-website/contact.html): phone, email, address
+- [Homepage](https://cashmycartx.com/): overview, instant offer entry point
+- [How It Works](https://cashmycartx.com/how-it-works.html): the 3-step process (offer, pickup, payment) and what a seller needs (title, ID, keys)
+- [Locations](https://cashmycartx.com/locations.html): Texas cities served, hours, contact
+- [FAQ](https://cashmycartx.com/faq.html): direct answers to common seller questions (pickup speed, title requirements, payment timing, vehicle condition, fees, service area)
+- [About Us](https://cashmycartx.com/about-us.html): company mission
+- [Contact](https://cashmycartx.com/contact.html): phone, email, address
 
 Spanish-language versions of every page above are available at the same
 path under `/es/` (e.g. `/es/how-it-works.html`).

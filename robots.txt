@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://amfrshawon.github.io/new-brand-website/sitemap.xml
+Sitemap: https://cashmycartx.com/sitemap.xml
