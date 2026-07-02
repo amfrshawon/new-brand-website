@@ -11,8 +11,8 @@ window.SITE_CONFIG = {
   tagline: "Sell Your Car In Seconds",
   phone: "1-888-000-0000",
   phoneHref: "tel:1-888-000-0000",
-  email: "info@example.com",
-  emailHref: "mailto:info@example.com",
+  email: "rabby@cashmycartx.com",
+  emailHref: "mailto:rabby@cashmycartx.com",
   address: {
     street: "[STREET ADDRESS]",
     city: "[CITY]",
