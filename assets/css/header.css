@@ -38,7 +38,7 @@
 
 .logo {
     z-index: 1002;
-    height: 40px;
+    height: 68px;
     display: flex;
     align-items: center;
     font-family: var(--font-head) !important;
@@ -47,6 +47,10 @@
     color: var(--text-white);
 }
 .logo img { height: 100%; width: auto; }
+
+@media(max-width: 768px) {
+    .logo { height: 52px; }
+}
 
 .nav-links {
     display: flex;
@@ -409,7 +413,7 @@ body.hide-nav-offer .mobile-action-bar .offer {
     .dropdown:hover .dropdown-menu { transform: translateY(0); }
     .lang-popup { right: 0; left: auto; }
 
-    .content-area { margin-top: 121px; }
+    .content-area { margin-top: 126px; }
 }
 
 /* Slightly tighter nav on small-tablet range */
@@ -513,6 +517,7 @@ body.hide-nav-offer .mobile-action-bar .offer {
     .mobile-menu-ctas .btn-primary { width: 100%; text-align: center; justify-content: center; display: block; border-radius: 12px; margin: 0; }
     .mobile-menu-ctas .btn-outline { width: 100%; text-align: center; justify-content: center; display: block; border-radius: 12px; margin: 0; }
 
-    #nav { height: 123px; align-content: center; }
-    .content-area { margin-top: 123px; }
+    /* height left as auto (base rule) instead of a hardcoded value — a fixed
+       height here silently breaks any time the logo/content changes size */
+    .content-area { margin-top: 138px; }
 }
