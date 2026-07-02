@@ -56,14 +56,17 @@
   }
 
   // Favicon can't live in each page's static <head> without touching every
-  // file, so it's injected here instead (runs once, on every page).
+  // file, so it's injected here instead (runs once, on every page). Uses a
+  // dedicated square icon (favicon), not the wide header logo — a wordmark
+  // logo scaled down to browser-tab size is illegible.
   function setupFavicon(cfg) {
-    if (!cfg.logo || !cfg.logo.src || document.getElementById("favicon-link")) return;
+    const src = cfg.favicon || (cfg.logo && cfg.logo.src);
+    if (!src || document.getElementById("favicon-link")) return;
     const link = document.createElement("link");
     link.id = "favicon-link";
     link.rel = "icon";
-    link.type = "image/svg+xml";
-    link.href = cfg.logo.src;
+    link.type = src.endsWith(".svg") ? "image/svg+xml" : "image/png";
+    link.href = src;
     document.head.appendChild(link);
   }
 

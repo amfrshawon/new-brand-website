@@ -43,6 +43,9 @@ window.SITE_CONFIG = {
     src: "/assets/images/logo.svg",
     alt: "CashMyCarTX logo",
   },
+  // Browser-tab icon — a dedicated compact/square icon, not the wide
+  // header logo (a wordmark scaled down to favicon size is illegible).
+  favicon: "/assets/images/favicon.png",
   social: {
     facebook: "#",
     instagram: "#",
