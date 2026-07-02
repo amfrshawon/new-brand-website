@@ -37,9 +37,10 @@ window.SITE_CONFIG = {
     },
   },
   logo: {
-    // Point this at an SVG/PNG in assets/images/ once you have a real file.
-    // Until then, header.js renders styled text using brandName instead.
-    src: null,
+    // Root-relative path — works from every page depth (root and es/) now
+    // that the site is served from cashmycartx.com's true root, not a
+    // GitHub Pages project subpath.
+    src: "/assets/images/logo.svg",
     alt: "CashMyCarTX logo",
   },
   social: {

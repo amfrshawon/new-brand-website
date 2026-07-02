@@ -52,6 +52,19 @@
     });
 
     setupLanguageLinks(root);
+    setupFavicon(cfg);
+  }
+
+  // Favicon can't live in each page's static <head> without touching every
+  // file, so it's injected here instead (runs once, on every page).
+  function setupFavicon(cfg) {
+    if (!cfg.logo || !cfg.logo.src || document.getElementById("favicon-link")) return;
+    const link = document.createElement("link");
+    link.id = "favicon-link";
+    link.rel = "icon";
+    link.type = "image/svg+xml";
+    link.href = cfg.logo.src;
+    document.head.appendChild(link);
   }
 
   // Every page carries <body data-lang="en|es" data-page-id="about-us">.
